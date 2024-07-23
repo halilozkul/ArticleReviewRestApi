@@ -81,18 +81,13 @@ namespace ArticleRestApi.Tests
         [Fact]
         public async Task UpdateArticle_ValidArticle_ReturnsOk()
         {
-            // Arrange
             var articleId = "valid-id";
             var updatedArticle = new Article { Id = articleId, Title = "Updated Title" };
 
-            // Mock the service method to simulate successful update
-            _mockService.Setup(s => s.UpdateAsync(updatedArticle))
-                        .Returns(Task.CompletedTask);
+            _mockService.Setup(s => s.UpdateAsync(updatedArticle)).Returns(Task.CompletedTask);
 
-            // Act
             var result = await _controller.UpdateArticle(updatedArticle);
 
-            // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedArticle = Assert.IsType<Article>(okResult.Value);
             Assert.Equal(articleId, returnedArticle.Id);
@@ -104,10 +99,8 @@ namespace ArticleRestApi.Tests
             var articleId = "existing-id";
             var successMessage = $"Article with id {articleId} has been successfully deleted.";
 
-            _mockService.Setup(s => s.GetAsync(articleId))
-                        .ReturnsAsync(new Article { Id = articleId });
-            _mockService.Setup(s => s.RemoveAsync(articleId))
-                        .ReturnsAsync(successMessage);
+            _mockService.Setup(s => s.GetAsync(articleId)).ReturnsAsync(new Article { Id = articleId });
+            _mockService.Setup(s => s.RemoveAsync(articleId)).ReturnsAsync(successMessage);
 
             var result = await _controller.DeleteArticle(articleId);
 
