@@ -97,7 +97,6 @@ namespace ReviewRestApi.Tests
         [Fact]
         public async Task UpdateReview_ValidReview_ReturnsOkResult()
         {
-            // Arrange
             var reviewId = "valid-review-id";
             var review = new Review
             {
@@ -108,10 +107,8 @@ namespace ReviewRestApi.Tests
 
             _mockService.Setup(s => s.UpdateAsync(It.IsAny<Review>())).Returns(Task.CompletedTask);
 
-            // Act
             var result = await _controller.UpdateReview(review);
 
-            // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedReview = Assert.IsType<Review>(okResult.Value);
             Assert.Equal(review.Id, returnedReview.Id);
@@ -121,22 +118,14 @@ namespace ReviewRestApi.Tests
         [Fact]
         public async Task DeleteReview_ExistingId_ReturnsOk()
         {
-            // Arrange
             var reviewId = "existing-id";
             var expectedResult = $"Review with id {reviewId} has been successfully deleted.";
 
-            // Mock the service method to simulate successful deletion
-            _mockService.Setup(s => s.RemoveAsync(reviewId))
-                        .ReturnsAsync(expectedResult);
+            _mockService.Setup(s => s.RemoveAsync(reviewId)).ReturnsAsync(expectedResult);
+            _mockService.Setup(s => s.GetAsync(reviewId)).ReturnsAsync(new Review { Id = reviewId });
 
-            // Mock the GetAsync method to ensure the review exists
-            _mockService.Setup(s => s.GetAsync(reviewId))
-                        .ReturnsAsync(new Review { Id = reviewId });
-
-            // Act
             var result = await _controller.DeleteReview(reviewId);
 
-            // Assert
             var okResult = Assert.IsType<OkObjectResult>(result);
             var returnedMessage = Assert.IsType<string>(okResult.Value);
             Assert.Equal(expectedResult, returnedMessage);
