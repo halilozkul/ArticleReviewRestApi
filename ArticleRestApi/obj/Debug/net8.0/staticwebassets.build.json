@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "yZMVYUalOF+CdvqJKSaSf1TcNdJhViYUWISCxUHAanU=",
+  "Source": "ArticleRestApi",
+  "BasePath": "_content/ArticleRestApi",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}

@@ -1,0 +1,331 @@
+2024-07-22 00:49:29.689 +03:00 [INF] User profile is available. Using 'C:\Users\z004m7ct\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 00:49:29.888 +03:00 [INF] Now listening on: http://localhost:5001
+2024-07-22 00:49:29.890 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 00:49:29.890 +03:00 [INF] Hosting environment: Development
+2024-07-22 00:49:29.891 +03:00 [INF] Content root path: C:\Projects\ArticleReviewApi\ReviewRestApi
+2024-07-22 00:49:34.794 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html - null null
+2024-07-22 00:49:34.979 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/index.html - 200 null text/html;charset=utf-8 188.4533ms
+2024-07-22 00:49:34.985 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 00:49:34.988 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 3.4606ms
+2024-07-22 00:49:34.991 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_vs/browserLink - null null
+2024-07-22 00:49:35.022 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.109ms
+2024-07-22 00:49:35.093 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - null null
+2024-07-22 00:49:35.179 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 85.6873ms
+2024-07-22 00:49:49.331 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/Auth/login - application/json;odata.metadata=minimal;odata.streaming=true 50
+2024-07-22 00:49:49.337 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-07-22 00:49:49.410 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi)'
+2024-07-22 00:49:49.425 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ReviewRestApi.Models.UserLogin) on controller ReviewRestApi.Controllers.AuthController (ReviewRestApi).
+2024-07-22 00:49:49.488 +03:00 [INF] Executing action method ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi) - Validation state: "Valid"
+2024-07-22 00:49:49.524 +03:00 [INF] Executed action method ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 30.1775ms.
+2024-07-22 00:49:49.534 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-22 00:49:49.541 +03:00 [INF] Executed action ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi) in 112.4557ms
+2024-07-22 00:49:49.542 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi)'
+2024-07-22 00:49:49.543 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 212.6229ms
+2024-07-22 00:50:11.978 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:50:12.036 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:50:12.049 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:50:13.671 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 1620.2709ms
+2024-07-22 00:50:13.674 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:50:13.676 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:50:13.708 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 1731.3736ms
+2024-07-22 00:51:18.669 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:51:18.676 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:51:18.677 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:51:18.680 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.8054ms
+2024-07-22 00:51:18.681 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:51:18.682 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:51:18.685 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 15.8976ms
+2024-07-22 00:51:20.490 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:51:20.496 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:51:20.497 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:51:20.500 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 1.1697ms
+2024-07-22 00:51:20.502 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:51:20.504 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:51:20.507 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 16.6702ms
+2024-07-22 00:54:44.728 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:54:44.732 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:54:44.734 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:54:44.737 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.7507ms
+2024-07-22 00:54:44.738 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:54:44.740 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:54:44.745 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 16.6421ms
+2024-07-22 00:54:50.071 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:54:50.075 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:54:50.076 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:54:50.077 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.6277ms
+2024-07-22 00:54:50.079 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:54:50.080 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:54:50.083 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 11.6125ms
+2024-07-22 00:55:02.813 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:55:02.817 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:55:02.819 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:55:02.821 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.6681ms
+2024-07-22 00:55:02.823 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:55:02.825 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:55:02.828 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 15.2913ms
+2024-07-22 00:55:17.329 +03:00 [INF] User profile is available. Using 'C:\Users\z004m7ct\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 00:55:17.532 +03:00 [INF] Now listening on: http://localhost:5001
+2024-07-22 00:55:17.536 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 00:55:17.537 +03:00 [INF] Hosting environment: Development
+2024-07-22 00:55:17.537 +03:00 [INF] Content root path: C:\Projects\ArticleReviewApi\ReviewRestApi
+2024-07-22 00:55:22.919 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html - null null
+2024-07-22 00:55:23.103 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/index.html - 200 null text/html;charset=utf-8 187.5599ms
+2024-07-22 00:55:23.108 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 00:55:23.111 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_vs/browserLink - null null
+2024-07-22 00:55:23.113 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 5.1346ms
+2024-07-22 00:55:23.142 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.184ms
+2024-07-22 00:55:23.191 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - null null
+2024-07-22 00:55:23.283 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 92.7955ms
+2024-07-22 00:55:27.868 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/Auth/login - application/json;odata.metadata=minimal;odata.streaming=true 50
+2024-07-22 00:55:27.874 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-07-22 00:55:27.943 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi)'
+2024-07-22 00:55:27.959 +03:00 [INF] Route matched with {action = "Login", controller = "Auth"}. Executing controller action with signature Microsoft.AspNetCore.Mvc.IActionResult Login(ReviewRestApi.Models.UserLogin) on controller ReviewRestApi.Controllers.AuthController (ReviewRestApi).
+2024-07-22 00:55:28.014 +03:00 [INF] Executing action method ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi) - Validation state: "Valid"
+2024-07-22 00:55:28.043 +03:00 [INF] Executed action method ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi), returned result Microsoft.AspNetCore.Mvc.OkObjectResult in 23.7943ms.
+2024-07-22 00:55:28.048 +03:00 [INF] Executing OkObjectResult, writing value of type '<>f__AnonymousType0`1[[System.String, System.Private.CoreLib, Version=8.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e]]'.
+2024-07-22 00:55:28.055 +03:00 [INF] Executed action ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi) in 92.59ms
+2024-07-22 00:55:28.056 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.AuthController.Login (ReviewRestApi)'
+2024-07-22 00:55:28.057 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/Auth/login - 200 null application/json; charset=utf-8 188.5902ms
+2024-07-22 00:55:47.917 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:55:47.958 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:55:47.970 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:55:48.505 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 533.7319ms
+2024-07-22 00:55:48.508 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:55:48.510 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:55:48.538 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 621.5627ms
+2024-07-22 00:56:12.099 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:56:12.105 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:12.105 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:56:12.108 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.7825ms
+2024-07-22 00:56:12.109 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:12.111 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:56:12.114 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 15.9112ms
+2024-07-22 00:56:12.895 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:56:12.899 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:12.900 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:56:12.903 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 1.3065ms
+2024-07-22 00:56:12.904 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:12.906 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:56:12.909 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 14.0826ms
+2024-07-22 00:56:13.320 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/api/v1/Review - null null
+2024-07-22 00:56:13.322 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:13.323 +03:00 [INF] Route matched with {action = "GetReviews", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[System.Collections.Generic.IEnumerable`1[ReviewRestApi.Models.Review]]] GetReviews() on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 00:56:13.325 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi) in 0.6005ms
+2024-07-22 00:56:13.327 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.GetReviews (ReviewRestApi)'
+2024-07-22 00:56:13.328 +03:00 [ERR] An unhandled exception has occurred while executing the request.
+System.InvalidOperationException: Unable to resolve service for type 'System.Net.Http.IHttpClientFactory' while attempting to activate 'ReviewRestApi.Controllers.ReviewController'.
+   at Microsoft.Extensions.DependencyInjection.ActivatorUtilities.ThrowHelperUnableToResolveService(Type type, Type requiredBy)
+   at lambda_method11(Closure, IServiceProvider, Object[])
+   at Microsoft.AspNetCore.Mvc.Controllers.ControllerFactoryProvider.<>c__DisplayClass6_0.<CreateControllerFactory>g__CreateController|0(ControllerContext controllerContext)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.InvokeInnerFilterAsync()
+--- End of stack trace from previous location ---
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Logged|17_1(ResourceInvoker invoker)
+   at Microsoft.AspNetCore.Routing.EndpointMiddleware.<Invoke>g__AwaitRequestTask|7_0(Endpoint endpoint, Task requestTask, ILogger logger)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at Swashbuckle.AspNetCore.SwaggerUI.SwaggerUIMiddleware.Invoke(HttpContext httpContext)
+   at Swashbuckle.AspNetCore.Swagger.SwaggerMiddleware.Invoke(HttpContext httpContext, ISwaggerProvider swaggerProvider)
+   at Microsoft.AspNetCore.Diagnostics.DeveloperExceptionPageMiddlewareImpl.Invoke(HttpContext context)
+2024-07-22 00:56:13.331 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/api/v1/Review - 500 null text/plain; charset=utf-8 11.3352ms
+2024-07-22 23:49:13.482 +03:00 [INF] User profile is available. Using 'C:\Users\z004m7ct\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 23:49:13.673 +03:00 [INF] Now listening on: http://localhost:5001
+2024-07-22 23:49:13.675 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 23:49:13.676 +03:00 [INF] Hosting environment: Development
+2024-07-22 23:49:13.676 +03:00 [INF] Content root path: C:\Projects\ArticleReviewApi\ReviewRestApi
+2024-07-22 23:49:20.468 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html - null null
+2024-07-22 23:49:20.666 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/index.html - 200 null text/html;charset=utf-8 200.8701ms
+2024-07-22 23:49:20.671 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 23:49:20.675 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_vs/browserLink - null null
+2024-07-22 23:49:20.676 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.9843ms
+2024-07-22 23:49:20.707 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 31.3406ms
+2024-07-22 23:49:20.874 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - null null
+2024-07-22 23:49:20.949 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 75.3958ms
+2024-07-22 23:49:45.447 +03:00 [INF] User profile is available. Using 'C:\Users\z004m7ct\AppData\Local\ASP.NET\DataProtection-Keys' as key repository and Windows DPAPI to encrypt keys at rest.
+2024-07-22 23:49:45.606 +03:00 [INF] Now listening on: http://localhost:5001
+2024-07-22 23:49:45.608 +03:00 [INF] Application started. Press Ctrl+C to shut down.
+2024-07-22 23:49:45.608 +03:00 [INF] Hosting environment: Development
+2024-07-22 23:49:45.609 +03:00 [INF] Content root path: C:\Projects\ArticleReviewApi\ReviewRestApi
+2024-07-22 23:49:51.057 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/index.html - null null
+2024-07-22 23:49:51.307 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/index.html - 200 null text/html;charset=utf-8 255.2803ms
+2024-07-22 23:49:51.318 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - null null
+2024-07-22 23:49:51.318 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/_vs/browserLink - null null
+2024-07-22 23:49:51.322 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_framework/aspnetcore-browser-refresh.js - 200 13762 application/javascript; charset=utf-8 4.2181ms
+2024-07-22 23:49:51.349 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/_vs/browserLink - 200 null text/javascript; charset=UTF-8 30.9313ms
+2024-07-22 23:49:51.399 +03:00 [INF] Request starting HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - null null
+2024-07-22 23:49:51.483 +03:00 [INF] Request finished HTTP/1.1 GET http://localhost:5001/swagger/v1/swagger.json - 200 null application/json;charset=utf-8 84.0447ms
+2024-07-22 23:50:40.129 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/v1/Review - application/json;odata.metadata=minimal;odata.streaming=true 115
+2024-07-22 23:50:40.133 +03:00 [WRN] Failed to determine the https port for redirect.
+2024-07-22 23:50:40.222 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi)'
+2024-07-22 23:50:40.237 +03:00 [INF] Route matched with {action = "PostReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ReviewRestApi.Models.Review]] PostReview(ReviewRestApi.Models.Review) on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 23:50:40.833 +03:00 [INF] Executing action method ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi) - Validation state: "Valid"
+2024-07-22 23:51:04.521 +03:00 [INF] Start processing HTTP request GET http://host.docker.internal:5002/api/articles/669d8538fb3e36d1ad89a60c
+2024-07-22 23:51:04.524 +03:00 [INF] Sending HTTP request GET http://host.docker.internal:5002/api/articles/669d8538fb3e36d1ad89a60c
+2024-07-22 23:51:04.577 +03:00 [INF] Received HTTP response headers after 50.3749ms - 404
+2024-07-22 23:51:04.580 +03:00 [INF] End processing HTTP request after 61.5899ms - 404
+2024-07-22 23:53:58.659 +03:00 [WRN] Article with id 669d8538fb3e36d1ad89a60c does not exist
+2024-07-22 23:54:06.790 +03:00 [INF] Executed action method ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 205949.8248ms.
+2024-07-22 23:54:06.796 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-07-22 23:54:06.800 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi) in 206554.6496ms
+2024-07-22 23:54:06.801 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi)'
+2024-07-22 23:54:06.803 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/v1/Review - 400 null text/plain; charset=utf-8 206672.3156ms
+2024-07-22 23:57:29.125 +03:00 [INF] Request starting HTTP/1.1 POST http://localhost:5001/api/v1/Review - application/json;odata.metadata=minimal;odata.streaming=true 115
+2024-07-22 23:57:29.129 +03:00 [INF] Executing endpoint 'ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi)'
+2024-07-22 23:57:29.137 +03:00 [INF] Route matched with {action = "PostReview", controller = "Review"}. Executing controller action with signature System.Threading.Tasks.Task`1[Microsoft.AspNetCore.Mvc.ActionResult`1[ReviewRestApi.Models.Review]] PostReview(ReviewRestApi.Models.Review) on controller ReviewRestApi.Controllers.ReviewController (ReviewRestApi).
+2024-07-22 23:57:29.150 +03:00 [INF] Executing action method ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi) - Validation state: "Valid"
+2024-07-22 23:57:39.006 +03:00 [INF] Start processing HTTP request GET http://host.docker.internal:5002/api/articles/669d8538fb3e36d1ad89a60c
+2024-07-22 23:57:39.007 +03:00 [INF] Sending HTTP request GET http://host.docker.internal:5002/api/articles/669d8538fb3e36d1ad89a60c
+2024-07-22 23:57:39.058 +03:00 [INF] Received HTTP response headers after 49.6967ms - 404
+2024-07-22 23:57:39.059 +03:00 [INF] End processing HTTP request after 52.9728ms - 404
+2024-07-22 23:58:03.971 +03:00 [WRN] Article with id 669d8538fb3e36d1ad89a60c does not exist
+2024-07-22 23:58:03.978 +03:00 [INF] Executed action method ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi), returned result Microsoft.AspNetCore.Mvc.BadRequestObjectResult in 34822.6819ms.
+2024-07-22 23:58:03.987 +03:00 [INF] Executing BadRequestObjectResult, writing value of type 'System.String'.
+2024-07-22 23:58:03.988 +03:00 [INF] Executed action ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi) in 34848.4944ms
+2024-07-22 23:58:03.989 +03:00 [INF] Executed endpoint 'ReviewRestApi.Controllers.ReviewController.PostReview (ReviewRestApi)'
+2024-07-22 23:58:03.989 +03:00 [INF] Request finished HTTP/1.1 POST http://localhost:5001/api/v1/Review - 400 null text/plain; charset=utf-8 34863.4579ms
