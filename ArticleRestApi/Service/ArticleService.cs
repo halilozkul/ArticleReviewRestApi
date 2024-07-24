@@ -81,6 +81,7 @@ namespace ArticleRestApi.Service
 
             await _articles.DeleteOneAsync(a => a.Id == id);
             _cache.Remove("GetAllArticles");
+            _cache.Remove($"GetArticle_{article.Id}");
 
             return $"Article with id {id} has been successfully deleted.";
         }
